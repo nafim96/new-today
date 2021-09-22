@@ -109,7 +109,7 @@ export class Navbar extends Component
                                     </select>
                                 </li>
                                 <li className="nav-item my-2 text-white nav-link">
-                                    Change-Api
+                                    Change-APIs
                                     <select className="text-center" onChange={ this.props.handleApi }>
                                         <option value="ea54278051f84078a47ef170118fd2dc">API-1</option>
                                         <option value="c66e3c225c9b4c368189f7046dd0a4f7">API-2</option>
