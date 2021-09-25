@@ -23,7 +23,7 @@ export class News extends Component
         super( props );
         this.state = {
             articles: [],
-            loading: false,
+            loading: true,
             page: 1,
             totalResults: 0
         };
@@ -72,13 +72,16 @@ export class News extends Component
         return (
             <>
                 <h1 className="text-center">News Today- { this.props.newsType } Top-Headlines</h1>
+                {
+                    this.state.loading && <Spinner />
+                }
                 <InfiniteScroll
                     dataLength={ this.state.articles.length }
                     next={ this.fetchMoreData }
                     hasMore={ this.state.articles.length !== this.state.totalResults }
                     loader={ <Spinner /> }
                     endMessage={
-                        <p style={ { textAlign: 'center' } }>
+                        !this.state.loading && <p style={ { textAlign: 'center' } }>
                             <b>WoW! You have seen it all { this.props.newsType } -News</b>
                         </p>
                     }
