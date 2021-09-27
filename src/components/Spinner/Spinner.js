@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import loading from "./load.gif"
+import React, { Component } from 'react';
+import loading from "./load.gif";
 
 export class Spinner extends Component
 {
@@ -7,10 +7,10 @@ export class Spinner extends Component
     {
         return (
             <div className="text-center">
-                <img src={ loading } alt="" />
+                <img className="my-3" src={ loading } alt="" />
             </div>
-        )
+        );
     }
 }
 
-export default Spinner
+export default Spinner;

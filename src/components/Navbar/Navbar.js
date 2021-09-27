@@ -24,8 +24,9 @@ export class Navbar extends Component
                             <li className="nav-item"><Link className="nav-link" to="/technology">Technology</Link></li>
                             <div className="d-flex justify-content-between">
                                 <li className="nav-item my-2 text-white nav-link">
-                                    Change-News-List
+                                    News-List-
                                     <select className="text-center" onChange={ this.props.handlePageSize }>
+                                        <option value={ this.props.pageValue }>{ this.props.pageValue }</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -49,7 +50,7 @@ export class Navbar extends Component
                                     </select>
                                 </li>
                                 <li className="nav-item my-2 text-white nav-link">
-                                    Change-Country
+                                    Country-
                                     <select className="text-center" onChange={ this.props.handleCountry }>
                                         <option value="ae">Arab Emirates </option>
                                         <option value="ar">Argentina</option>
@@ -109,11 +110,15 @@ export class Navbar extends Component
                                     </select>
                                 </li>
                                 <li className="nav-item my-2 text-white nav-link">
-                                    Change-APIs
+                                    APIs-
                                     <select className="text-center" onChange={ this.props.handleApi }>
-                                        <option value="ea54278051f84078a47ef170118fd2dc">API-1</option>
-                                        <option value="c66e3c225c9b4c368189f7046dd0a4f7">API-2</option>
-                                        <option value="b044f94007bd498b9d9c2a64974859b6">API-3</option>
+                                        <option value={ `ea54278051f84078a47ef170118fd2dc` }>API-1</option>
+                                        <option value={ `c66e3c225c9b4c368189f7046dd0a4f7` }>API-2</option>
+                                        <option value={ `b044f94007bd498b9d9c2a64974859b6` }>API-3</option>
+                                        <option value={ `034cf9c1e6fe4593bbf40378e83d4e52` }>API-4</option>
+                                        <option value={ `08ae68a7cbaa4ff8944141ae65b13a54` }>API-5</option>
+                                        <option value={ `bc1ce1cd331a44429d822be87081d2ea` }>API-6</option>
+                                        <option value={ `d7eaf9743db9452f8b2f58027e663a4c` }>API-7</option>
                                     </select>
                                 </li>
                             </div>
